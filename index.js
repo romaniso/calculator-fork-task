@@ -22,14 +22,18 @@ class Calculator {
 
       switch (operator) {
         case "+":
-          return a + b;
+          this.result = this.operandA + this.operandB;
+          return this.result;
         case "-":
-          return a - b;
+          this.result = this.operandA - this.operandB;
+          return this.result;
         case "*":
-          return a * b;
+          this.result = this.operandA * this.operandB;
+          return this.result;
         case "/":
           if (b !== 0) {
-            return a / b;
+            this.result = this.operandA / this.operandB;
+            return this.result;
           } else {
             throw new DivideByZeroError("Zero is not divisible");
           }
